@@ -1,0 +1,12 @@
+{
+	"esnext": true,
+	"globalstrict": true,
+	"node": true,
+	"browser": true,
+	"newcap": false,
+	"maxlen": 80,
+	"validthis": true,
+	"unused": true,
+	"undef": true,
+	"varstmt": true
+}
