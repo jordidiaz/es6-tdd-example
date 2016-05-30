@@ -2,4 +2,4 @@
 
 import grange from './grange';
 
-grange();
+console.log(grange(3, 6));
