@@ -1,10 +1,12 @@
 'use strict';
 
-const grange = (start, end, {
-    inclusive = true,
-    step = 1,
-    transformFn = x => x
-  } = {}) => {
+const grange = ({
+                  start = 0,
+                  end = 10,
+                  inclusive = true,
+                  step = 1,
+                  transformFn = x => x
+                } = {}) => {
 
   let reverse = false;
 
