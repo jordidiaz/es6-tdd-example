@@ -44,3 +44,9 @@ tape('Start can be omitted -- defaults to 0', function (assert) {
   assert.deepEqual(grange({end: 6, inclusive: false, transformFn: n => n * 10}), [10, 20, 30, 40, 50]);
   assert.end();
 });
+
+tape('End can be omitted -- defaults to 10', function (assert) {
+  assert.plan(1);
+  assert.deepEqual(grange({start: 6, inclusive: true, transformFn: n => n * 2}), [12, 14, 16, 18, 20]);
+  assert.end();
+});
