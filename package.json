@@ -2,7 +2,6 @@
   "name": "es6-tdd-example",
   "version": "1.0.0",
   "description": "Simple TDD example with ES6",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jordidiaz/es6-tdd-example.git"
