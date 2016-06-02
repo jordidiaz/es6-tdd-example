@@ -20,8 +20,20 @@ const grange = ({
   // Range generator function.
   const fn = (x, i) => i + start;
 
+  // Step filter
+  const stepFilterFn = (value, index, array) => {
+    if ((index == 0) || (index == array.length - 1)) {
+      // Always maintain first and last values
+      return true;
+    } else {
+      return (value % step) == 0
+    }
+  }
+
   // Range generation.
-  let range = Array.from({length: length}, fn).map(transformFn);
+  let range = Array.from({length: length}, fn)
+    .map(transformFn)
+    .filter(stepFilterFn);
 
   // Not inclusive: Omit, the first and las index values.
   if (!inclusive) {
