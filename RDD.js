@@ -34,8 +34,6 @@ console.log('End can be omitted -- defaults to 10');
 const [...omitEnd] = grange({start: 6, inclusive: true, transformFn: n => n * 2});
 console.log(`grange({start: 6, inclusive: true, transformFn: n => n * 2}) = ${omitEnd}\n`);
 
-// // Create recurring loops
-// // const loopGen = grange(1, 3, {loop: true});
-// // const loop =
-// //   range(0, 7).map(() => loopGen.next().value); // [1, 2, 3, 1, 2, 3, 1, 2]
-// // console.log(loop);
+console.log('Recurring loop');
+const [...loop] = grange({start: 2, end: 5, loop: true, maxLength: 10});
+console.log(`grange({start: 2, end: 5, loop: true, maxLength: 10}) = ${loop}\n`);

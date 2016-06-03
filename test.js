@@ -56,3 +56,9 @@ tape('End can be omitted -- defaults to 10', function (assert) {
   assert.deepEqual(grange({start: 6, inclusive: true, transformFn: n => n * 2}), [12, 14, 16, 18, 20]);
   assert.end();
 });
+
+tape('Recurring loop', function (assert) {
+  assert.plan(1);
+  assert.deepEqual(grange({start: 2, end: 5, loop: true, maxLength: 10}), [2, 3, 4, 5, 2, 3, 4, 5, 2, 3]);
+  assert.end();
+});
